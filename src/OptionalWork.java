@@ -30,5 +30,16 @@ public class OptionalWork{
     public void showFlatMap(){
         Optional<Double> two = Optional.of(2.0);
         Optional<Double> zero = Optional.of(0.0);
+        two.flatMap(num -> divide(1.0, num)).orElse(0.0);
+        zero.flatMap(num -> divide(1.0, num)).orElse(0.0);
     }
+
+    private Optional<Double> divide(Double first, Double second) {
+        if(second == 0){
+            return Optional.empty();
+        }
+        return Optional.of(first/second);
+    }
+
+
 }
