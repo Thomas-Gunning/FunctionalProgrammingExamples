@@ -29,7 +29,7 @@ public class StreamExample{
     }
 
     public void showFilter(){
-        Stream.of(0,1,2,3).filter(num -> n < 2).forEach(System.out::println);
+        Stream.of(0,1,2,3).filter(num -> num < 2).forEach(System.out::println);
 
     }
     public void negateFilter(){
